@@ -22,6 +22,11 @@ body {
 }
 /* -------------------------------------------------------------------------------------- */
 /* header of the document  */
+header .menu-logo{
+  width: 40px;
+  margin: 3px;
+  display: none;
+}
 header .logo {
   width: 150px;
   margin: 8px;
@@ -82,8 +87,11 @@ header .dropdown-menu {
   position: absolute;
   top: calc(100% + 1.2rem);
   left: 15px;
-  display: flex;
+  display: none;
   flex-direction: column;
+}
+header .cart-container:hover .dropdown-menu{
+  display: flex;
 }
 header .dropdown-menu a {
   margin-bottom: 20px;
@@ -149,6 +157,9 @@ body .product-info div p:nth-child(2) {
 }
 
 @media (max-width: 840px) {
+  header .menu-logo{
+    display: block;
+  }
   header .menu-navigation {
     display: none;
   }
@@ -162,7 +173,7 @@ body .product-info div p:nth-child(2) {
     width: 180px;
     height: 180px;
   }
-}
-
-@media (max-width: 640px) {
+  body .dropdown{
+    display: none;
+  }
 }
